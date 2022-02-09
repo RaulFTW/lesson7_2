@@ -7,7 +7,7 @@ services:
 
   maven:
     build:
-      context: /maven/
+      context: ./maven
       dockerfile: Dockerfile
    volumes:
       - static:/usr/local/boxfuse-sample-java-war-hello/target

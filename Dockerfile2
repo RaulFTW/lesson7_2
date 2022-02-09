@@ -1,6 +1,4 @@
-FROM alpine:3.14
-
-RUN apk update && apk add curl openjdk11
+FROM tomcat:9.0.0.M15-jre8-alpine
 
 RUN mkdir /opt/tomcat/
 

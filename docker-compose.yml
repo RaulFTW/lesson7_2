@@ -3,7 +3,7 @@ version: '3.3'
 services:
 
   tomcat:
-    build: tomcat/
+    image: tomcat:9.0.0.M15-jre8-alpine
     ports:
       - "80:8080"
 

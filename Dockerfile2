@@ -1,6 +1,6 @@
 FROM alpine:3.14
 
-RUN apt-get update && apt-get install -y curl
+RUN apk update && apk add curl
 
 RUN mkdir /opt/tomcat/
 

@@ -12,5 +12,3 @@ RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 
 RUN git clone git@github.com:boxfuse/boxfuse-sample-java-war-hello.git /usr/local/boxfuse-sample-java-war-hello
 RUN cd /usr/local/boxfuse-sample-java-war-hello && mvn package
-
-CMD ["/opt/tomcat/bin/catalina.sh", "run"]

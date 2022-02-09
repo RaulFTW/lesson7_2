@@ -2,13 +2,14 @@ version: '3.3'
 
 volumes:
   - static:
+
 services:
 
   maven:
     build:
       context: .
       dockerfile: ./maven/Dockerfile
-    volumes:
+   volumes:
       - static:/usr/local/boxfuse-sample-java-war-hello/target
 
   tomcat:

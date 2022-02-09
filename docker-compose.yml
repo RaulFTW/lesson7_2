@@ -1,16 +1,15 @@
 version: '3.3'
 
-services:
-
 volumes:
   - static:
+services:
 
   maven:
     build:
-      context: /maven
-      dockerfile: Dockerfile
-      volumes:
-        - static:/usr/local/boxfuse-sample-java-war-hello/target
+      context: .
+      dockerfile: ./maven/Dockerfile
+    volumes:
+      - static:/usr/local/boxfuse-sample-java-war-hello/target
 
   tomcat:
     image: tomcat:9.0.0.M15-jre8-alpine

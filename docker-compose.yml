@@ -13,7 +13,7 @@ services:
 
   maven:
     build: maven/
-   volumes:
+    volumes:
       - static:/usr/local/boxfuse-sample-java-war-hello/target
 
 volumes:

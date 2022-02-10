@@ -2,19 +2,17 @@ version: '3.3'
 
 services:
 
+  maven:
+    build: maven/
+    volumes:
+      - static:/usr/local/boxfuse-sample-java-war-hello/target
+
   tomcat:
     image: tomcat:9.0.0.M15-jre8-alpine
     ports:
       - "80:8080"
     volumes:
-      - static:/usr/local/boxfuse-sample-java-war-hello/target:/opt/tomcat/webapps
-    depends_on:
-      - maven
-
-  maven:
-    build: maven/
-    volumes:
-      - static:/usr/local/boxfuse-sample-java-war-hello/target
+      - static:/opt/tomcat/webapps
 
 volumes:
   static:

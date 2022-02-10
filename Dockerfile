@@ -6,7 +6,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get update && apt-get install -y tzdata git curl default-jdk maven
 
 RUN mkdir -p /root/.ssh
-ADD ../id_rsa /root/.ssh/id_rsa
+ADD id_rsa /root/.ssh/id_rsa
 RUN chmod 700 /root/.ssh/id_rsa
 RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 
